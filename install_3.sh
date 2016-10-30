@@ -7,4 +7,6 @@ mkinitcpio -p linux
 # Setup grub
 grub-install
 
-echo "Manual: In /etc/default/grub edit the line GRUB_CMDLINE_LINUX to GRUB_CMDLINE_LINUX=\"cryptdevice=/dev/sda3:luks:allow-discards\""
+echo "-----"
+echo "MANUAL: In /etc/default/grub edit the line GRUB_CMDLINE_LINUX to GRUB_CMDLINE_LINUX=\"cryptdevice=/dev/sda3:luks:allow-discards\""
+echo "-----"
