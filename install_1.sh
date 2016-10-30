@@ -56,7 +56,7 @@ mount /dev/sda2 /mnt/boot
 mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
-pacstrap /mnt base base-devel grub-efi-x86_64 efibootmgr vim zsh git
+pacstrap /mnt base base-devel grub-efi-x86_64 efibootmgr vim zsh git dialog
 
 genfstab -pU /mnt >> /mnt/etc/fstab
 
