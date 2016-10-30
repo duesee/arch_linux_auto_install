@@ -3,27 +3,44 @@
 
 # TODO: loadkeys de-latin1-nodeadkeys, wifi-menu and curl -O <THESESCRIPTS>
 
+echo "Wiping..."
+# Wipe...
+(
+echo o
+echo Y
+echo w
+echo Y
+) | gdisk /dev/sda
+
+echo "Partitioning..."
 # Create partitions (TODO: are your sure, etc...)
 (
 # New partition table
 echo o
+echo Y
 # New partition (EFI)
 echo n
 echo
+echo 
 echo +512M
-echo fe00
+echo EF00
 # New partition (Boot)
 echo n
+echo
 echo
 echo +512M
 echo
 # New partition (LUKS)
+echo n
+echo
 echo
 echo
 echo
 echo w
+echo Y
 ) | gdisk /dev/sda
 
+echo "MKFS..."
 mkfs.fat -F32 /dev/sda1
 mkfs.ext2 /dev/sda2
 
