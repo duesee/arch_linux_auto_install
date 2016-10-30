@@ -24,6 +24,6 @@ passwd duesee
 
 # Configure mkinitcpio with modules needed for the initrd image
 echo "-----"
-echo "MANUAL: Add keymap, encrypt and lvm2 to HOOKS in /etc/mkinitcpio.conf"
+echo "MANUAL: Add keymap, encrypt and lvm2 to HOOKS before block in /etc/mkinitcpio.conf"
 echo "MANUAL: Add i915 to MODULES in /etc/mkinitcpio.conf"
 echo "-----"
