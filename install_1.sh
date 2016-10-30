@@ -3,15 +3,6 @@
 
 # TODO: loadkeys de-latin1-nodeadkeys, wifi-menu and curl -O <THESESCRIPTS>
 
-echo "Wiping..."
-# Wipe...
-(
-echo o
-echo Y
-echo w
-echo Y
-) | gdisk /dev/sda
-
 echo "Partitioning..."
 # Create partitions (TODO: are your sure, etc...)
 (
