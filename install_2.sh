@@ -12,6 +12,10 @@ echo LANG=de_DE.UTF-8 >> /etc/locale.conf
 echo LANGUAGE=de_DE >> /etc/locale.conf
 echo LC_ALL=C >> /etc/locale.conf
 
+echo "KEYMAP=de-latin1-nodeadkeys" >> /etc/vconsole.conf
+
+locale-gen
+
 # Set password for root
 echo "Next: Password for root..."
 passwd
