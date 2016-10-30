@@ -23,4 +23,7 @@ echo "Next: Password for duesee..."
 passwd duesee
 
 # Configure mkinitcpio with modules needed for the initrd image
-echo "Manual: Add keymap, encrypt and lvm2 to HOOKS in /etc/mkinitcpio.conf"
+echo "-----"
+echo "MANUAL: Add keymap, encrypt and lvm2 to HOOKS in /etc/mkinitcpio.conf"
+echo "MANUAL: Add i915 to MODULES in /etc/mkinitcpio.conf"
+echo "-----"
