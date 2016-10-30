@@ -1,4 +1,4 @@
-# Arch Linux; UEFI, Encrypted FS; Simple partition layout; No swap;
+# Arch Linux; UEFI, Encrypted FS; SSD; Simple partition layout; No swap;
 # Official installation guide: https://wiki.archlinux.org/index.php/Installation_Guide
 
 # TODO: loadkeys de-latin1-nodeadkeys, wifi-menu and curl -O <THESESCRIPTS>
@@ -56,5 +56,6 @@ genfstab -pU /mnt >> /mnt/etc/fstab
 echo "tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0" >> /mnt/etc/fstab
 
 echo "----------------------"
-echo "Manual: Change \"relatime\" on all non-boot partitions to \"noatime\"  in /etc/fstab (reduces wear if using an SSD)"
+echo "MANUAL: Change \"relatime\" on all non-boot partitions to \"noatime\"  in /etc/fstab"
+echo ":%s/relatime/noatime/g"
 echo "----------------------"
